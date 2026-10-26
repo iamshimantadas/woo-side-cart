@@ -10,7 +10,6 @@
 }
 
 /* Background Overlay */
-
 .wsc-overlay {
     position: fixed;
     inset: 0;
@@ -18,40 +17,30 @@
     z-index: 99998;
     opacity: 0;
     visibility: hidden;
-    transition:
-        opacity 0.25s ease,
-        visibility 0.25s ease;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 /* Side Cart Drawer */
-
 .wsc-drawer {
     position: fixed;
     z-index: 99999;
     top: 0;
     right: 0;
-
     width: min(var(--wsc-width), 100vw);
     height: 100dvh;
-
     background: #fff;
     color: var(--wsc-ink);
-
     display: flex;
     flex-direction: column;
-
     box-shadow: -8px 0 32px rgba(0, 0, 0, 0.12);
-
     transform: translateX(105%);
     transition: transform 0.28s ease;
-
     font-family: inherit;
 }
 
 /* Open State */
-
 body.wsc-open {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 body.wsc-open .wsc-overlay {
@@ -64,23 +53,18 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Header */
-
 .wsc-header {
     padding: 25px 30px 18px;
-
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-
     border-bottom: 1px solid #f0f0f0;
 }
 
 .wsc-header h2 {
     font-size: 30px;
     line-height: 1.15;
-
     margin: 0 0 8px;
-
     font-weight: 800;
     letter-spacing: -0.8px;
     color: #111;
@@ -93,27 +77,20 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Close Button */
-
 .wsc-close {
     border: 0;
     background: transparent;
     color: #111;
-
     font-size: 34px;
     line-height: 1;
-
     padding: 0 0 0 12px;
-
     cursor: pointer;
 }
 
 /* Scrollable Cart Body */
-
 .wsc-body {
     padding: 0 30px;
-
     overflow-y: auto;
-
     flex: 1;
     min-height: 0;
 }
@@ -123,32 +100,23 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Product Row */
-
 .wsc-item {
     position: relative;
-
     display: grid;
     grid-template-columns: 96px minmax(0, 1fr);
-
     gap: 14px;
-
     padding: 8px 0 22px;
     margin-bottom: 14px;
-
     border-bottom: 1px solid #f0f0f0;
 }
 
 /* Product Image */
-
 .wsc-product-thumb {
     width: 96px;
     height: 96px;
-
     border: 1px solid #e4e4e4;
     border-radius: 8px;
-
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,22 +126,18 @@ body.wsc-open .wsc-drawer {
     display: flex;
     width: 100%;
     height: 100%;
-
     align-items: center;
     justify-content: center;
 }
 
 .wsc-product-image {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: contain;
 }
 
 /* Product Information */
-
 .wsc-product-info {
     min-width: 0;
     padding-right: 8px;
@@ -182,9 +146,7 @@ body.wsc-open .wsc-drawer {
 .wsc-product-name {
     font-size: 16px;
     line-height: 1.35;
-
     font-weight: 800;
-
     padding-right: 12px;
     margin: 0 0 8px;
 }
@@ -195,13 +157,10 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Variations */
-
 .wsc-variation {
     color: #666e79;
-
     font-size: 14px;
     line-height: 1.45;
-
     margin-bottom: 15px;
 }
 
@@ -217,24 +176,19 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Quantity and Price */
-
 .wsc-item-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 10px;
 }
 
 .wsc-quantity {
     display: inline-flex;
     align-items: center;
-
     height: 44px;
-
     border: 1px solid #dedede;
     border-radius: 24px;
-
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -242,24 +196,18 @@ body.wsc-open .wsc-drawer {
 .wsc-quantity button {
     width: 38px;
     height: 42px;
-
     border: 0;
     background: #fff;
     color: #111;
-
     font-size: 22px;
-
     cursor: pointer;
 }
 
 .wsc-quantity span {
     min-width: 42px;
-
     text-align: center;
-
     font-size: 16px;
     font-weight: 700;
-
     padding: 0 8px;
 }
 
@@ -269,45 +217,20 @@ body.wsc-open .wsc-drawer {
     white-space: nowrap;
 }
 
-/* Remove Product */
-
-.wsc-remove {
-    position: absolute;
-    top: 0;
-    right: -1px;
-
-    border: 0;
-    background: transparent;
-    color: #69707a;
-
-    font-size: 25px;
-    line-height: 1;
-
-    cursor: pointer;
-
-    padding: 0 0 5px 8px;
-}
-
 /* Fixed Footer */
-
 .wsc-footer {
     flex-shrink: 0;
-
     padding: 24px 30px 25px;
-
     border-top: 1px solid #e8e8e8;
     background: #fff;
 }
 
 /* Subtotal */
-
 .wsc-subtotal {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 12px;
-
     font-size: 19px;
 }
 
@@ -317,40 +240,33 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Shipping Message */
-
 .wsc-footnote {
     color: #737984;
-
     font-size: 13px;
     line-height: 1.5;
-
     margin: 14px 0 18px;
 }
 
 /* Footer Buttons */
-
 .wsc-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: 16px;
 }
 
 .wsc-actions a {
     min-height: 64px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 20px;
-
     text-decoration: none !important;
-
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
-
     transition: opacity 0.2s ease;
+    text-align: center;
+    line-height: 1.2;
+    padding: 8px 12px;
 }
 
 .wsc-actions a:hover {
@@ -358,7 +274,6 @@ body.wsc-open .wsc-drawer {
 }
 
 /* View Cart */
-
 .wsc-view-cart {
     border: 1.5px solid #111;
     color: #111 !important;
@@ -366,15 +281,19 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Checkout */
-
 .wsc-checkout {
     border: 1.5px solid #111;
     color: #fff !important;
     background: #111;
 }
 
-/* Empty Cart */
+.wsc-checkout.wsc-min-not-met {
+    background: #555;
+    border-color: #555;
+    cursor: not-allowed;
+}
 
+/* Empty Cart */
 .wsc-empty {
     text-align: center;
     padding: 55px 10px;
@@ -391,18 +310,13 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Error Message */
-
 .wsc-notice {
     display: none;
-
     padding: 10px 12px;
     margin-top: 12px;
-
     border-radius: 6px;
-
     background: #fff3f3;
     color: #a40000;
-
     font-size: 13px;
 }
 
@@ -411,18 +325,254 @@ body.wsc-open .wsc-drawer {
 }
 
 /* Loading State */
-
 .wsc-loading {
     opacity: 0.55;
     pointer-events: none;
 }
 
 /* =========================================
-   Mobile Responsive Design
+   Floating Cart Button
    ========================================= */
 
-@media (max-width: 600px) {
+.wsc-floating-button {
+    position: fixed !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    z-index: 99997 !important;
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: fit-content !important;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 56px;
+    padding: 0 18px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    background: #111 !important;
+    color: #fff !important;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1 !important;
+    text-transform: none !important;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22) !important;
+    transition: transform 0.2s ease;
+}
 
+.wsc-floating-button:hover {
+    transform: translateY(-2px);
+    background: #222 !important;
+    color: #fff !important;
+}
+
+.wsc-floating-icon {
+    font-size: 21px;
+}
+
+.wsc-floating-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    border-radius: 50px;
+    background: #e91e63;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+body.wsc-open .wsc-floating-button {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* =========================================
+   Cart Progress Bar (Perfect Grid Layout)
+   ========================================= */
+
+.wsc-progress {
+    background: #fff5f8;
+    border: 1px solid #f3dfe6;
+    border-radius: 12px;
+    padding: 16px 20px 20px;
+    margin: 14px 0 18px;
+    font-family: inherit;
+    color: #111;
+    box-sizing: border-box;
+}
+
+.wsc-progress *,
+.wsc-progress *::before,
+.wsc-progress *::after {
+    box-sizing: inherit;
+}
+
+.wsc-progress-slot .wsc-progress {
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.wsc-progress-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.wsc-progress-title {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    color: #111;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wsc-progress-total {
+    font-size: 14px;
+    color: #69707a;
+}
+
+.wsc-progress-total strong {
+    color: #111;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* The Grid that perfectly aligns dots and text */
+.wsc-progress-grid {
+    position: relative;
+    width: 100%;
+    padding-top: 8px;
+    margin-bottom: 12px;
+}
+
+/* The background track and pink fill */
+.wsc-progress-bg-track {
+    position: absolute;
+    top: 15px; /* Aligns with the center of the first 16px tick */
+    /* Start from center of first column, end at center of last column */
+    left: calc(50% / var(--wsc-total-items, 5));
+    width: calc(100% - (100% / var(--wsc-total-items, 5)));
+    height: 6px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.wsc-progress-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.35s ease;
+}
+
+/* The flex columns */
+.wsc-progress-marks {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.wsc-progress-mark {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 4px; /* Give text breathing room */
+}
+
+/* The actual dot */
+.wsc-progress-tick {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #d5d5d5;
+    margin-bottom: 8px; /* Space between dot and text */
+    transition: all 0.2s ease;
+}
+
+.wsc-progress-mark.is-done .wsc-progress-tick {
+    border-color: #e91e63;
+    background: #e91e63;
+}
+
+/* Vertical Dividers between columns */
+.wsc-progress-mark:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 22px; /* Start below the dot */
+    bottom: 4px;
+    width: 1px;
+    background: #f0e0e5;
+}
+
+.wsc-progress-mark-amount {
+    display: block;
+    font-weight: 800;
+    color: #111;
+    font-size: 13px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.wsc-progress-mark-label {
+    display: block;
+    color: #69707a;
+    font-size: 11px;
+    line-height: 1.3;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.wsc-progress-mark.is-done .wsc-progress-mark-label {
+    color: #e91e63;
+    font-weight: 700;
+}
+
+.wsc-progress-hint {
+    margin-top: 24px;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.wsc-progress-hint strong {
+    color: #e91e63;
+}
+
+/* =========================================
+   Responsive Layout Adjustments
+   ========================================= */
+
+.wsc-drawer .wsc-progress-marks {
+    gap: 0;
+}
+.wsc-drawer .wsc-progress-mark-amount {
+    font-size: 11px;
+    white-space: normal; 
+}
+.wsc-drawer .wsc-progress-mark-label {
+    font-size: 9px;
+    line-height: 1.2;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
     :root {
         --wsc-width: 100vw;
     }
@@ -489,88 +639,116 @@ body.wsc-open .wsc-drawer {
     .wsc-actions a {
         min-height: 57px;
         border-radius: 16px;
-        font-size: 16px;
+        font-size: 14px;
     }
-}
 
-
-
-/* Floating Cart Button */
-
-.wsc-floating-button {
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    z-index: 99997;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-
-    min-height: 56px;
-    padding: 0 18px;
-
-    border: none;
-    border-radius: 50px;
-
-    background: #111;
-    color: #fff;
-
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 800;
-
-    cursor: pointer;
-
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
-
-    transition: transform 0.2s ease;
-}
-
-.wsc-floating-button:hover {
-    transform: translateY(-2px);
-    background: #222;
-    color: #fff;
-}
-
-.wsc-floating-icon {
-    font-size: 21px;
-}
-
-.wsc-floating-count {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 22px;
-    height: 22px;
-    padding: 0 5px;
-
-    border-radius: 50px;
-
-    background: #e91e63;
-    color: #fff;
-
-    font-size: 12px;
-    font-weight: 800;
-}
-
-/* Hide button while side cart is open */
-
-body.wsc-open .wsc-floating-button {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
     .wsc-floating-button {
-        right: 16px;
-        bottom: 16px;
+        right: 16px !important;
+        bottom: 16px !important;
         min-height: 52px;
-        padding: 0 15px;
+        padding: 0 15px !important;
     }
+    
+    .wsc-progress {
+        padding: 12px 14px 16px;
+    }
+    .wsc-progress-mark-amount {
+        font-size: 11px;
+    }
+    .wsc-progress-mark-label {
+        font-size: 10px;
+    }
+    .wsc-progress-hint {
+        font-size: 13px;
+        margin-top: 18px;
+    }
+}
+
+/* =========================================
+   HARDENING: THEME CONFLICT FIXES
+   ========================================= */
+
+.wsc-drawer,
+.wsc-overlay {
+    isolation: isolate;
+}
+
+.wsc-drawer button,
+.wsc-drawer a {
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    font-family: inherit;
+    line-height: 1.2;
+}
+
+.wsc-drawer h2,
+.wsc-drawer p,
+.wsc-drawer .wsc-footnote {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Fix #1: Force the Remove Button to the exact top-right corner */
+.wsc-item {
+    position: relative !important;
+}
+
+.wsc-remove {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    z-index: 10 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    color: #69707a !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    border: 0 !important;
+    cursor: pointer !important;
+    transform: none !important;
+}
+
+.wsc-remove:hover {
+    color: #111 !important;
+}
+
+/* Ensure progress text doesn't break layout on product pages */
+.single-product .wsc-progress,
+.woocommerce-product-page .wsc-progress {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.single-product .wsc-progress-marks,
+.woocommerce-product-page .wsc-progress-marks {
+    overflow: visible;
+}
+
+.wsc-drawer .wsc-product-image {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: auto !important;
+    width: auto !important;
+    aspect-ratio: 1 / 1;
+}
+
+.wsc-floating-button::before,
+.wsc-floating-button::after {
+    content: none !important;
+    display: none !important;
+}
+
+.wsc-floating-button,
+.wsc-floating-button * {
+    pointer-events: auto !important;
 }

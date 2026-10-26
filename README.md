@@ -1,4 +1,11 @@
-# Woocommerce Side Cart
-This side cart helps for woocommerce store to show cart items in side cart view.
+# Woo Side Cart
+This plugin helps to show products in which added into cart into this side cart. 
 
-![Plugin Front View](phase1.JPG)
+## Cart Page Preview
+![Cart Page](cart-page.png)
+
+## Shop Page Product Add To Cart
+![Side Cart Preview](shop-page.gif)
+
+## Admin Backend Preview
+![Plugin Admin Backend](woocommerce-backend.png)
